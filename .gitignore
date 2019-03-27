@@ -1,3 +1,23 @@
+# common files
+*.zip
+*.txt
+*.doc
+*.docx
+*.pdf
+*.csv
+*.ppt
+*.pptx
+*.xls
+*.xlsx
+
+#python configuration files
+*.iml
+*.xml
+*.pyc
+
+#classifier models
+*.pkl
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
