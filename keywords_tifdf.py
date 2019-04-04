@@ -7,11 +7,11 @@
 @time: 2019-03-13 20:20
 """
 
-import jieba # Chinese Word Extraction Data https://github.com/fxsjy/jieba/
+import jieba  # Chinese Word Extraction Data https://github.com/fxsjy/jieba/
 # Another Tool:http://thulac.thunlp.org/
 from jieba import analyse
-import numpy as np # Array manipulation tools
-import xlrd # Open Excel Table
+import numpy as np  # Array manipulation tools
+import xlrd  # Open Excel Table
 
 FilePath = 'E:\project'
 PatientRecordFile = FilePath + '\DATA.xlsx'

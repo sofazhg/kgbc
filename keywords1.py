@@ -34,7 +34,7 @@ idf_dic.close()
 idf_dic_new.close()
 jieba.analyse.set_idf_path('E:\project\idf_dic_new.txt')
 """
-#尝试将整个影像报告文档作为IDF词库，但是IDF词库格式要求每行一个词条+一个频率，尝试失败。
+# 尝试将整个影像报告文档作为IDF词库，但是IDF词库格式要求每行一个词条+一个频率，尝试失败。
 
 FilePath_RptMG = 'E:\project\乳腺钼靶DR摄片(双侧).xls'
 RptMG = pd.read_excel(FilePath_RptMG)
@@ -44,10 +44,10 @@ ExamMG = []
 for i in range(rows):
     ExamMG.append(RptMG['IMAGING_FINDING'][i])
 
-print("钼靶报告份数：" + str(len(ExamMG))) #54 rows in total
-temp = ''.join(ExamMG) #convert list to string
+print("钼靶报告份数：" + str(len(ExamMG)))  # 54 rows in total
+temp = ''.join(ExamMG)  # convert list to string
 tfidf = jieba.analyse.extract_tags
-keywords = tfidf(temp,topK = 100, withWeight = True)
+keywords = tfidf(temp, topK=100, withWeight=True)
 
 print("钼靶关键词提取：\n")
 for keyword in keywords:
